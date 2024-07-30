@@ -3,7 +3,7 @@
 **CONTRIBUTORS:** bpiwowar, digitalfisherman  
 **TAGS:** formatting, bibtex, bibliography, footnotes  
 **REQUIRES AT LEAST:** 3.8  
-**TESTED UP TO:** 5.2.2  
+**TESTED UP TO:** 6.6.1  
 **STABLE TAG:** 0.6.0  
 **LICENSE:** GPLv2 or later  
 **LICENSE URI:** http://www.gnu.org/licenses/gpl-2.0.html  

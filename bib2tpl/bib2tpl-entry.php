@@ -44,7 +44,7 @@ class PaperciteBibtexEntryFormat {
     } 
   }
 
-  function end_element(&$parser, $name) {
+  function end_element($parser, $name) {
     if ($name == "format") {
       $this->format = preg_replace("#[\n\r]+#"," ",$this->format);
       unset($this->format);
@@ -53,19 +53,19 @@ class PaperciteBibtexEntryFormat {
     }
   }
 
-  function characters(&$parser, &$data) {
+  function characters($parser, &$data) {
     if (isset($this->format) && !is_null($this->format))
       $this->format .= $data;
   }
 
-  function count(&$value) {
+  function count($value) {
     if (!is_object($value)) 
       return $value ? 1 : 0;
 
     return $value->count();
   }
 
-  function format(&$value) {
+  function format($value) {
     if (!is_object($value)) 
       return $value;
 
@@ -172,7 +172,7 @@ class PaperciteBibtexEntryFormat {
    * @return string Either a string if an array was passed or input value
    *                otherwise.
    */
-  function niceAuthors(&$authors)
+  function niceAuthors($authors)
   {
     // OSBib glue
     $delimitTwo = "primaryTwoCreatorsSep";
@@ -311,7 +311,7 @@ class PaperciteBibtexEntryFormat {
    * @param     $firstNameInitial
    * @return    Formatted string of initials.
    */
-  function checkInitials(&$creator, $initialsStyle, $firstNameInitial)
+  function checkInitials($creator, $initialsStyle, $firstNameInitial)
   {
     /**
      * Format firstname
